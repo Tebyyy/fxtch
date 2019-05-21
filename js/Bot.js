@@ -5,8 +5,6 @@
 
 const Bot = {};
 
-const token = process.env.token;
-
 Bot.DBM = null;
 
 const DiscordJS = require('discord.js');
@@ -67,7 +65,7 @@ Bot.initEvents = function() {
 };
 
 Bot.login = function() {
-	this.bot.login(token);
+	this.bot.login(this.DBM.Files.data.settings.token);
 };
 
 Bot.onReady = function() {
